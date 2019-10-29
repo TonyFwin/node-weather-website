@@ -10,8 +10,7 @@ const forecast = (long, lat, callback) => {
       callback('Unable to find locaiton.', undefined)
     } else {
       const {summary, temperatureLow, temperatureHigh, windGust} = body.daily.data[0];
-      const {currently} = body;
-      const {temperature, precipProbability, windSpeed, humidity} = currently;
+      const {temperature, precipProbability, windSpeed, humidity} = body.currently;
       
       callback(undefined, 
         `
