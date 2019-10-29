@@ -14,11 +14,11 @@ const forecast = (long, lat, callback) => {
       
       callback(undefined, 
         `
-          ${summary} It is currently ${temperature}° out. 
-          Today's high is ${temperatureHigh}° and today's low is ${temperatureLow}°
-          The current humidity is ${humidity*100}%
-          There is a ${precipProbability*100}% chance of rain.
-          The wind speed is ${windSpeed} mph with gusts up to ${windGust} mph.
+          ${summary} It is currently ${Math.round(temperature)}° out. 
+          Today's high is ${Math.round(temperatureHigh)}° and today's low is ${Math.round(temperatureLow)}°
+          The current humidity is ${Math.round(humidity*100)}%
+          There is a ${Math.round(precipProbability*100)}% chance of rain.
+          The wind speed is ${Math.round(windSpeed)} mph with gusts up to ${Math.round(windGust)} mph.
         `
         );
     }
