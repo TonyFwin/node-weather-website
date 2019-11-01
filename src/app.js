@@ -34,22 +34,6 @@ app.get('/about', (req, res) => {
   })
 });
 
-app.get('/help', (req, res) => {
-  res.render('help', {
-    helpText: 'This is some helpful text',
-    title: 'Help',
-    name: 'Tony Nguyen'
-  })
-});
-
-app.get('/help/*', (req, res) => {
-  res.render('404', {
-    title: 'Weather App',
-    name: 'Tony Nguyen',
-    errorMessage: 'Help article not found.'
-  })
-});
-
 app.get('/weather', (req, res) => {
   if (!req.query.address){
     return res.send({
