@@ -11,13 +11,13 @@ const forecast = (long, lat, callback) => {
     } else {
       const {summary, temperatureLow, temperatureHigh, windGust} = body.daily.data[0];
       const {temperature, precipProbability, windSpeed, humidity} = body.currently;
-      
+      const {precipType} = body.daily.data[0];
       callback(undefined, 
         `
           ${summary} It is currently ${Math.round(temperature)}° out. 
           Today's high is ${Math.round(temperatureHigh)}° and today's low is ${Math.round(temperatureLow)}°
           The current humidity is ${Math.round(humidity*100)}%
-          There is a ${Math.round(precipProbability*100)}% chance of rain.
+          There is a ${Math.round(precipProbability*100)}% chance of ${precipType}.
           The wind speed is ${Math.round(windSpeed)} mph with gusts up to ${Math.round(windGust)} mph.
         `
         );
