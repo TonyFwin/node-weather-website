@@ -13,8 +13,18 @@
 <body>
   <div class="main-content">
     {{>header}}
-    <p>This site was created by {{name}}. It uses data from mapbox.com and darksky.net.</p>
-    <img class="portrait" src="images/squid-wakes.jpg" alt="">
+    <p>This site was created by {{name}}.</p>
+    <p>
+      It uses data from <a href="https://www.mapbox.com/"> mapbox.com</a> and <a
+        href="https://darksky.net/">darksky.net</a>.
+    </p>
+    <p>
+      This site was built using <a href="https://nodejs.org/en/">Node.js</a>,
+      <a href="http://expressjs.com/">Expressjs</a>,
+      and <a href="js.com/package/hbs">handlebars.js</a>
+    </p>
+    <p>The code for this project can be found <a href="https://github.com/TonyFwin/node-weather-website">here</a>.</p>
+    <img class="portrait" src="images/tony_avatar.png" alt="Avatar of Tony Nguyen">
   </div>
 
   {{>footer}}
